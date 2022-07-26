@@ -1,0 +1,2 @@
+# djangoapp
+Django Rest application
