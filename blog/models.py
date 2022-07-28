@@ -1,6 +1,7 @@
 from django.db import models
-from django.contrib.auth.models import User
 from django.utils import timezone
+
+from django.contrib.auth import get_user_model
 
 
 class Category(models.Model):
@@ -26,7 +27,7 @@ class Post(models.Model):
     content = models.TextField()
     slug = models.SlugField(max_length=250, unique_for_date='published')
     published = models.DateTimeField(default=timezone.now)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
+    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name="blog_posts")
     status = models.CharField(max_length=10, choices=options, default='published')
 
     objects = models.Manager()
