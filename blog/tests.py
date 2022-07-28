@@ -1,16 +1,16 @@
 from django.test import TestCase
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from blog.models import Post, Category
 
 
-class Test_Create_Post(TestCase):
+class TestCreatePost(TestCase):
     @classmethod
     def setUpTestData(cls):
         test_category = Category.objects.create(name='django')
 
-        testuser1 = User.objects.create_user(
-            username='test_user1', password='123456789')
-        testuser1.save()
+        test_user = get_user_model().objects.create_user(
+            email='test@user.com', password='123456789')
+        test_user.save()
 
         test_post = Post.objects.create(
             category_id=1, title='Post Title', excerpt='Post Excerpt',
@@ -26,7 +26,7 @@ class Test_Create_Post(TestCase):
         title = f'{post.title}'
         content = f'{post.content}'
         status = f'{post.status}'
-        self.assertEqual(author, 'test_user1')
+        self.assertEqual(author, 'test@user.com')
         self.assertEqual(title, 'Post Title')
         self.assertEqual(content, 'Post Content')
         self.assertEqual(status, 'published')
