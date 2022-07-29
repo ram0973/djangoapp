@@ -1,0 +1,197 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:'ru' }}">
+<head>
+  <meta charset="UTF-8">
+  {% block title %}{% endblock %}
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% block meta %}
+  {% endblock %}
+  <meta name="yandex-verification" content="0d15b27a2a559d6e" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/icofont/icofont.min.css">
+  <link href="/assets/fa-5.12.0/css/all.css" rel="stylesheet">
+  <link href="/assets/css/bootstrap-reboot.css" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  {% block blockbots %}{% endblock %}
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-3 col-6">
+          <div class="logo">
+            <a href="#home"><img src="/assets/img/logo.png" alt="logo" /></a>
+          </div>
+        </div>
+        <div class="col-lg-10 col-md-9 col-6">
+          <div class="responsive-menu"></div>
+            <div class="mainmenu">
+              <ul id="primary-menu">
+                <li><a class="nav-link active" href="#home">Главная</a></li>
+                <li><a class="nav-link" href="#team">О нас</a></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </header><!-- header section end -->
+
+  <!-- hero area start -->
+  <section class="hero-area" id="home">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="hero-area-content">
+            <h1>Поверка<br> приборов<br> учёта воды</h1>
+            <a href="#contact" class="appao-btn">Оставить заявку</a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="">
+              <img src="/assets/img/callcenter.png" class="img-fluid" alt="Поверка счётчиков">
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="">
+            <div class="hero-area-content">
+              <h2>Заявки принимаются круглосуточно<br><br><i class="fa fa-phone"></i> (8552) 54-40-00</h2>
+              <ul>
+                <li>Стоимость услуги - 400 рублей за счётчик</li>
+                <li>Работаем с 8.00 до 20.00 ч.<br> (без выходных)</li>
+                <li>Без демонтажа и снятия пломб</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- hero area end -->
+
+  <section class="about-area ptb-70" id="team">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+					    <div class="sec-title">
+							<h2>ООО Фирма &laquo;Ремавтоматика&raquo;</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+  <!-- feature section start -->
+  <section class="feature-area ptb-70" id="feature">
+    <div class="container">
+      <div class="row flexbox-center">
+        <div class="col-lg-4">
+          <div class="single-feature-box text-lg-right text-center">
+            <ul>
+              <li>
+                <div class="feature-box-info">
+                  <h4>Смена приборов учёта</h4>
+                </div>
+                <div class="feature-box-icon">
+                  <i class="icofont-bulb-alt"></i>
+                </div>
+              </li>
+              <li>
+                <div class="feature-box-info">
+                  <h4>Опломбировка</h4>
+                </div>
+                <div class="feature-box-icon">
+                  <i class="icofont-badge"></i>
+                </div>
+              </li>
+              <li>
+                <div class="feature-box-info">
+                  <h4>Составление акта</h4>
+                </div>
+                <div class="feature-box-icon">
+                  <i class="icofont icofont-law-document"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="single-feature-box text-center">
+            <img src="/assets/img/betar.png" alt="feature">
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="single-feature-box text-lg-left text-center">
+            <ul>
+              <li>
+                <div class="feature-box-icon">
+                  <i class="icofont-bag-alt"></i>
+                </div>
+                <div class="feature-box-info">
+                  <h4>Доставка акта в ГРЦ</h4>
+                </div>
+              </li>
+              <li>
+                <div class="feature-box-icon">
+                  <i class="icofont-money"></i>
+                </div>
+                <div class="feature-box-info">
+                  <h4>Расчёт за услуги на месте</h4>
+                </div>
+              </li>
+              <li>
+                <div class="feature-box-icon">
+                  <i class="icofont-ban"></i>
+                </div>
+                <div class="feature-box-info">
+                  <h4>Без демонтажа и снятия пломб</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- feature section end -->
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+        </div>
+        <div class="col-lg-3">
+        </div>
+      </div>
+      <div class="row">
+        <p class="copyright-area">&copy; Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved |
+          This template is made with <i class="fa fa-heart" aria-hidden="true"></i>
+          by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+        </p>
+        <p class="copyright-area">
+          <a href="https://vk.com/remautomatica/" target="_blank">Мы ВКонтакте <i class="fab fa-vk"></i></a>
+        </p>
+      </div>
+    </div>
+  </footer><!-- footer section end -->
+  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="questionPostSuccessModal"
+       aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+          integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+          crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  </body>
+</html>

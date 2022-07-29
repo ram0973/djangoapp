@@ -1,18 +1,17 @@
 from django.contrib.auth import get_user_model
 from django.shortcuts import render
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status
+from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .serializers import CustomUserSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
-from rest_framework.permissions import AllowAny
+
+from .serializers import CustomUserSerializer
 
 
-def user_view(request, username):
-    user = get_user_model().objects.filter(is_active=True, email=username).first()
-    return render(request, 'accounts/user_view.html', {'user': user})
-
-
+# @method_decorator(csrf_exempt, name='dispatch')
 class CustomUserCreate(APIView):
     permission_classes = [AllowAny]
 
@@ -36,5 +35,5 @@ class BlacklistTokenUpdateView(APIView):
             token = RefreshToken(refresh_token)
             token.blacklist()
             return Response(status=status.HTTP_205_RESET_CONTENT)
-        except Exception as e:
+        except Exception as ignored:
             return Response(status=status.HTTP_400_BAD_REQUEST)

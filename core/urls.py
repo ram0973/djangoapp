@@ -21,8 +21,8 @@ urlpatterns = [
     path("", include('blog.urls', namespace='blog')),
     path('admin/', admin.site.urls),
     path("api/articles/", include('blog_api.urls', namespace='api_blog')),
-    path('api/users/', include('accounts.urls', namespace='accounts')),
+    path('api/auth/', include('accounts.urls', namespace='accounts')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/auth/login', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/auth/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
